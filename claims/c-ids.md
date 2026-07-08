@@ -5,12 +5,18 @@ The claim axis. Answers "what is this row asserting."
 **Authoritative text:** `draft-bu-agentproto-security-principal-binding-02`,
 Section 9 (Songbo Bu). The criterion questions below are reproduced for
 navigation; the normative definitions live in draft-bu Section 9. The
-R-mapping column is the crosswalk, not part of Songbo's text; it records
-which requirement(s) each claim answers and is reconciled on the WIMSE list
-with the claim author present.
+"Observed R anchors" column is the crosswalk, not part of Songbo's text: it
+records the requirement anchors observed in contributed rows and crosswalks
+to date. It is non-exhaustive, and it does not subordinate the C-ID taxonomy
+to R1-R9; the two are co-equal axes. It is reconciled on the WIMSE list with
+the claim author present.
 
-| C-ID | Criterion question | Answers (R) |
-|------|--------------------|-------------|
+**Row-level rule (Bu, WIMSE list, 2026-07-07):** a C-ID is not treated as
+satisfying an R by itself. The row, with its verifier, failure behavior,
+accepted result, and evidence, is what answers a requirement.
+
+| C-ID | Criterion question | Observed R anchors |
+|------|--------------------|--------------------|
 | C-002 | Who authorized the task, policy, role, or delegation? | R5, R1 |
 | C-005 | What action was requested, attempted, completed, blocked, or failed? | R8, R6 |
 | C-007 | What evidence, signature, receipt, attestation, log entry, or record supports an action? | R8 |

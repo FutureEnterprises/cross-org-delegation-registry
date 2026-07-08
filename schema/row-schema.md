@@ -16,8 +16,10 @@ below. The first block follows the mapping-table template of
 | `verifier_and_rule` | Who checks it, and the rule applied. |
 | `binding_and_freshness` | What the claim is bound to; replay, revocation, expiry. |
 | `failure_behavior` | Behavior when the claim is absent, stale, or unverifiable. |
+| `accepted_result` | The constrained verifier result that may be consumed after successful verification, and what that result does not authorize. Required on every row, whatever its `c_id`; C-011 remains a claim class, this field is the row-level statement. |
 | `dependency` | External document, service, channel, or arrangement relied on. |
-| `evidence` | Public tests and vectors, or an explicit statement that none exist yet. |
+| `evidence` | Public tests and vectors, or an explicit statement that none exist yet. Must declare `evidence_type`. |
+| `evidence_type` | Mandatory inside `evidence`. One of: `local_harness`, `cross_language_consistency`, `independent_interop`, `external_implementation`, `none`. Distinct signals do not collapse: a local harness is not interop, and empty evidence says `none`. |
 | `gradient_position` | Where the mechanism sits on the first-contact trust gradient. See [`../gradient.md`](../gradient.md). |
 | `spec_status` | specified / planned / inherited / assumption. |
 | `impl_status` | implemented / partial / none / external. |

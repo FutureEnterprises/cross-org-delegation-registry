@@ -35,11 +35,16 @@ fill it.
 - **failure_behavior:** any hop signature failure, subset violation, or
   expiry fails the request as an authorization failure, independent of
   possession and of human authorization.
+- **accepted_result:** on success the verifier may consume exactly: "this
+  chain conveys the stated terminal scope for this operation from the root
+  principal, at verification time." It does not authorize consuming holder
+  possession, human authorization, execution evidence, physical completion,
+  or relying-party policy acceptance.
 - **dependency:** the originating organization's trust anchor (root only;
   self-certifying identifiers cover intermediate hops), inline conveyance of
   parent tokens, and a possession-proving transport for holder proof.
 - **evidence:** public test vectors NOT yet published. This cell is open and
-  says so.
+  says so. `evidence_type: none`.
 - **gradient_position:** `{ "root": "general_infrastructure",
   "consequence_tier": "software", "sufficiency_bar": "none" }` (root anchor
   acquisition; a continuity mechanism to amortize the root pin across
@@ -47,7 +52,9 @@ fill it.
 - **spec_status:** specified (chain verification); planned (normative
   fail-closed revocation, pedigree-02).
 - **impl_status:** partial.
-- **evaluated_against:** draft-rampalli-pedigree-01; reece-00; draft-bu-02.
+- **evaluated_against:** draft-rampalli-pedigree-00 (the only revision
+  posted; -01 and -02 are in the submission pipeline, and this row
+  re-evaluates when they post); reece-00; draft-bu-02.
 
 ---
 
